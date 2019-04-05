@@ -1,0 +1,471 @@
+@charset "utf-8";
+/* 웹폰트는 가장 먼저 선언하는 것을 권장 */
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("./fontello.css");
+/* 크로스 브라우징 */
+@import url("./normalize.css");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+
+/* 기본 스타일 */
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.4rem;
+    /* serif : 삐침이 있는 글꼴. sans-serif : 깔끔한 글꼴
+    Noto sans == spoqa han sans(본고딕) 폰트는 크로스 브라우징 이슈가 생길 수 있다.
+    */
+    font-weight: 400;
+    font-family: 'Spoqa Han Sans', sans-serif;
+    background: url("images/bg_flower.png") no-repeat 50% 0,#aaa linear-gradient(#aaa 0%, #ccc 40%, #eee 70%, #fff 100%);
+    color:#181818;
+}
+
+/* 링크 스타일 */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 숨긴 콘텐츠 */
+.readable-hidden, legend{
+    background: red;
+    /* display: none;  보조 기기로도 접근이 불가하다.*/
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    /* 요소 박스의 특정 영역만 나타나도록 지정하는 속성 */
+    clip: rect(0 0 0 0);
+    /* left: -9999em; */
+    /* opacity: 0; */
+}
+
+/* 예약어, 가상선택자 */
+/* a:link {
+    color: green;
+}
+a:visited {
+    color: gray;
+} */
+/* link, visited 보다 앞에 선언하면 안된다. 구체성의 개념 */
+/* a:hover, a:focus {
+    color: red;
+} */
+
+/* 플로트 이슈를 해결하기 위한  CSS 모듈 */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.container {
+    /* height: 100vh; */
+}
+.header, .visual, .main, .slogan, .footer {
+    width: 940px;
+    margin: 0 auto;
+}
+/* 헤더 */
+.header {
+    background:#fff;
+    /* normal flow를 유지, 지금 현재 코드에서는 absoulte인 .logo의 기준이 된다. */
+    position: relative;
+    min-height: 100px;
+    padding: 0 30px 38px;
+    border-radius: 0 0 15px 15px;
+}
+/* 로고 */
+.logo {
+    /* absolute, fixed, float는 요소를 block으로 바꾼다. 떠있는 상태이기 때문에 겹쳐 보일 수 있다. 
+    absoulte의 기준은 상위요소 중 static(defaulte 값)이 아닌 것. */
+    position: absolute;
+    top: 50px;
+    left: 65px;
+    z-index: 10;
+}
+/* 멤버 링크 */
+.member {
+    text-align: right;
+    /* 포커스 할 때 윗부분 보이게 하기 위해 */
+    padding: 2px 0;
+    position: relative;
+    right: -10px;
+    /* 공백 문자 제거 */
+    /* font-size: 0; */
+    /* flex로 */
+    /* display:flex;
+    justify-content:flex-end; */
+}
+
+.member li, .member a {
+    display: inline-block;
+    /* 다시 폰트 사이즈를 지정 */
+    /* font-size: 1.4rem; */
+}
+
+.member li:nth-child(n+2)::before {
+    content: ":";
+}
+/* 터치 면적을 넓히기 위해 */
+.member a {
+    padding: 8px 7px 7px 10px;
+    text-transform: uppercase;
+}
+                   
+/* 메인 메뉴 */
+.menu {
+    margin-top: 5px;
+    padding-left: 225px;
+    height: 47px;
+    border-top: 2px solid #000;
+    /* 앞에 다른 컬러를 선언한 이유는 예외상황에서 저 앞에 있는 컬러를 보여주기 위해서  */
+    background: #fc4e37 linear-gradient(to right, #f9ed32 0%,#fc7035 0%,#fc4e37 36%,#f93636 70%);
+    border-radius: 0 0 5px 5px;
+}
+
+.menu-item {
+    float: left;
+    position: relative;
+}
+
+.menu-item-text {
+    display:block;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 45px;
+    padding: 0 20px;
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+}
+
+.menu-act .menu-item-text {
+    color: #ff0 !important;
+}
+
+.menu-act .menu-item-text::after {
+    content: "";
+    display: block;
+    border-bottom:2px solid #000;
+}
+
+.sub-menu {
+    background: aqua;
+    position: absolute;
+    top:47px;
+    /* 부모 영역을 벗어나오더라도 한줄로 나오게 wrap 하지 않게 한다. */
+    white-space: nowrap;
+    display: none;
+}
+
+.menu-act .sub-menu {
+    display: block !important;
+}
+
+.sub-menu1, .sub-menu2, .sub-menu3 {
+    left: 0;
+}
+
+.sub-menu4, .sub-menu5, .sub-menu6 {
+    right: 0;
+}
+
+.sub-menu li, .sub-menu a {
+    display:inline-block;
+}
+
+.sub-menu a{
+    padding: 8px 0;
+    margin-right: 10px;
+}
+/* 비주얼 */
+@keyframes textAni {
+    0%{
+        font-size: 12px;
+        color:rgba(0, 0, 0, 0);
+        /* padding: 0; */
+        transform: translate(0,0);
+    }
+    100%{
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        /* padding: 75px 0 0 400px; */
+        transform: translate(400px,75px);
+    }
+}
+.visual {
+    height: 120px;
+    position: relative;
+}
+
+/* 배경 애니메이션 */
+@keyframes flowerAni {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+.visual::before, .visual::after {
+    /* animation-name: flowerAni;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: paused; */
+    animation: flowerAni 2s infinite alternate;
+    content: "";
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    background-repeat: no-repeat;
+}
+
+.visual::before {
+    background-image: url("images/ani_flower_01.png"), url("images/ani_flower_02.png");
+    background-position: 0 -10px, 670px 0;
+}
+
+.visual::after {
+    background-image: url("images/ani_flower_03.png"), url("images/ani_flower_04.png");
+    background-position: 300px 0, 800px 0;
+    animation-delay: 1s;
+}
+
+/* 텍스트 애니메이션 */
+
+.visual-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    /* display: inline-block; */
+    z-index: 10;
+    animation-name: textAni;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+}
+
+/* 메인 콘텐츠 */
+.main {
+    border-radius: 15px 15px 0 0;
+    padding: 30px 15px;
+    background: #fff;
+    min-height: 450px;
+    /* height: 60vh; */
+    /* display:flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    /* justify-content: space-evenly; */
+}
+.group {
+    float: left;
+    margin: 0 15px;
+}
+.group1 {
+    width: 250px;
+}
+.group2 {
+    width: 380px;
+}
+.group3 {
+    width: 190px;
+}
+
+/* 로그인 */
+.login {
+    background: radial-gradient(circle at right top, #fc7035,#fc4e37);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px #aaa;
+}
+
+.login-heading {
+    color: #ff0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* 들여쓰기, 음수는 내어쓰기  */
+    text-indent: 1em;
+}
+
+.login-form {
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px 0 10px;
+    margin-top: 10px;
+}
+
+.login-form fieldset {
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #aaa;
+}
+
+.user-pw {
+    margin-top: 6px;
+}
+
+.sign {
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 8px 10px;
+    letter-spacing: -1px;
+}
+
+.sign li:first-child {
+    float: left;
+}
+
+.sign li:last-child {
+    float: right;
+}
+
+.sign li::before {
+    color:#e25d2d;
+}
+
+.login-form label {
+    display: inline-block;
+    width: 4em;
+}
+
+.login-form input {
+    width: 90px;
+    height: 23px;
+    border: 1px solid #aaa;
+    padding: 1px 1px 1px 5px;
+}
+
+.btn-login {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    padding: 2px;
+    background: #e25d2d;
+    color: #fff;
+    font-size: 1.3rem;
+    border-radius: 3ppx;
+} 
+
+/* 유효성 검사 배너 */
+.validation-list{
+    margin-top: 25px;
+}
+
+
+.validation-list a {
+    display: block;
+    border:1px solid #aaa;
+    background: url("/css/images/validation_icon.png") no-repeat 20px 50%, linear-gradient(#ccc,#eee);
+    border-radius: 30px;
+    height: 30px;
+    line-height: 28px;
+    text-indent: 45px;
+    margin-top: 10px;
+}
+
+/* .validation-list a::before {
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    position: relative;
+    top:3px;
+    content: "";
+} */
+
+/* 배너 영역 */
+
+/* .validation-list li {
+    border: 1px solid #aaa;
+    background: url("/css/images/validation_icon.png") no-repeat 20px,  linear-gradient( 180deg,#aaa 0%, #ddd 100%);
+    border-radius: 30px;
+}
+
+.validation-list a {
+    padding-left: 34px;
+    display: block;
+    margin: 5px;
+}
+
+.validation-list li:first-child {
+    margin-top: 25px;
+}
+
+.validation-list li:last-child {
+    margin-top: 10px;
+} */
+
+
+
+/* 슬로건 */
+.slogan {
+    background: tomato;
+    height: 10vh;
+}
+
+/* 푸터 */
+.footer-bg {
+    background: purple;
+}
+.footer {
+    background: yellow;
+    height: 10vh;
+}

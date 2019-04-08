@@ -500,6 +500,66 @@ a:visited {
     float: right;
 }
 
+/* 검색 폼*/
+.search {
+    background: linear-gradient(#ccc,#eee);
+    border-top: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px 10px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search input {
+    width: 195px;
+    height: 24px;
+}
+
+.btn-search {
+    background-color: #333;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 1px 10px;
+    height: 24px;
+    color: #fff;
+    font-size: 85%;
+}
+/* .search {
+    background: linear-gradient(#ccc,#eee);
+    border-top: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    border-radius: 10px 10px 0 0;
+    padding: 15px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search fieldset {
+    background-color: violet;
+}
+
+.search label {
+    background-color: #e25d2d;
+}
+
+.search input {
+    background-color: #f9ed32;
+}
+
+.btn-search {
+    background-color: teal;
+} */
+
 /* 슬로건 */
 .slogan {
     background: tomato;

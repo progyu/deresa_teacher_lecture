@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>웹카페(Web cafe)</title>
+    <link rel="shortcut icon" href="images/common/webcafe.ico">
+    <link rel="icon" href="images/common/webcafe.png" type="image/png">
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
@@ -136,7 +138,7 @@
                                 W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...
                             </dd>
                         </div>
-                        <div class="even clearfix">
+                        <div class="even clearfix  ">
                             <dt class="term-list-subject">
                                 <a href="#">웹 표준 이란?</a>
                             </dt>
@@ -150,7 +152,21 @@
                     </dl>
                 </section>
             </div>
-            <div class="group group2">그룹2</div>
+            <div class="group group2">
+                <section class="search">
+                    <h2 class="readable-hidden">검색</h2>
+                    <form id="search-form" action="http://formspree.io/rocket7101@gmail.com" method="POST" class="search-form">
+                        <fieldset>
+                            <legend>검색 폼</legend>
+                            <div class="search-container">
+                            <label for="search" class="icon-search">자료검색</label>
+                            <input type="search" id="search" required placeholder="검색어를 입력하세요.">
+                            <button form="search-form" type="submit" class="btn-search">검색</button>
+                        </div>
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
             <div class="group group3">그룹3</div>
         </main>
         <article class="slogan">슬로건</article>

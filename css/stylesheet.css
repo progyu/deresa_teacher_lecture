@@ -453,7 +453,52 @@ a:visited {
     margin-top: 10px;
 } */
 
+/* 웹 관련 용어 */
+.term {
+    margin-top: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: #ccc linear-gradient(#ccc,#eee);
+}   
 
+.term-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.term div {
+    margin-top: 10px;
+}
+
+.term-list-subject {
+    margin-top: -4px;
+}
+
+.term-list-subject, .term-list-brief   {
+    width:145px;
+    float: right;
+}
+
+.term-list-thumnail {
+    float: left;
+}
+
+.term-list-brief {
+    margin-top:5px;
+}
+
+.term-list-thumnail img{
+    vertical-align: top;
+}
+
+.even .term-list-subject, .even .term-list-brief {
+    float: left;
+}
+
+.even .term-list-thumnail {
+    float: right;
+}
 
 /* 슬로건 */
 .slogan {

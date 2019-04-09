@@ -179,6 +179,7 @@ a:visited {
 .menu-item {
     float: left;
     position: relative;
+    cursor: pointer;
 }
 
 .menu-item-text {
@@ -559,6 +560,155 @@ a:visited {
 .btn-search {
     background-color: teal;
 } */
+
+
+/* 공지사항 및 자료실 */
+
+.board {
+    background: yellow;
+    margin-top: 20px;
+    position: relative;
+    min-height: 180px;
+    /* 자식들이 모두 normal flow를 벗어남.  */
+}
+
+.board-list {
+    padding-top: 45px;
+}
+
+/* .board-list li::before {
+    background: aqua;
+    position: relative;
+    top:-5px;
+} */
+/* 높이를 맞추는 꼼수 ex) position:relative; top -8px; */
+
+/* .board-list a {
+    background: yellow;
+    width: 270px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+/* white-space : 블록 개체에만 사용할 수 있다. */
+/* block format context : overflow, inline-block 등등 */
+
+/* .board-list time {
+    background: pink;
+    float:right;
+} */
+
+.board-list li {
+    margin: 8px 0;
+    display: flex;
+    /* 부모가 flex이면 안에 item들이 inline이어도 크기를 가질 수 있다. */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.board-list a {
+    width: 270px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tab {
+    position: absolute;
+    top:0;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(#ccc,#eee);
+    padding: 5px 10px;
+    color: #333;
+    cursor: pointer;
+}
+
+.notice-heading {
+    left: 0;
+}
+
+.pds-heading {
+    left: 73px;
+}
+
+.board-act .tab {
+    border-color: #e25d2d #e25d2d #fff #e25d2d;
+    background: #fff;
+    color:#e25d2d;
+}
+
+.board-list, .board-more {
+    display: none;
+}
+
+.board-act .board-list, .board-act .board-more {
+    display: block;
+}
+
+.board-more {
+    position: absolute;
+    top:-8px;
+    right: -8px;
+    /* 클릭 영역을 넓게 잡기 위해 */
+    padding: 8px;
+}
+
+.board-more::before {
+    color: hsla(110, 90%, 30%, 1);
+}
+
+/* .board {
+    background-color: yellow;
+    margin-top: 20px;
+    position: relative;
+
+}
+
+.tab {
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    display: inline-block;
+    padding: 5px;
+    background: linear-gradient(#ccc,#eee);
+}
+
+.board-act {
+}
+
+.notice-more {
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.board-list {
+    font-size: 1.4rem;
+}
+
+.pds-list, .pds-more {
+    display: none;
+}
+
+.pds {
+    position: absolute;
+    top:0;
+    left:63px;
+}
+
+.icon-dot-circled > a{
+    background: #e25d2d;
+    display: inline-block;
+    width: 260px;
+    margin-bottom: 10px;
+
+}
+.icon-dot-circled > time{
+    background: turquoise;
+    float: right;
+} */
+
+
 
 /* 슬로건 */
 .slogan {

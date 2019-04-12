@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <title>IR 기법 및 Sprite 이미지의 활용</title>
+    <style>
+        .btn-wrapper {
+            background: yellow;;
+            margin: 50px;
+        }
+
+        .btn-wrapper span {
+            /* 대표속성이 독이 되는 경우가 발생  - 재정의 , - 우선순위 문제*/
+            /* background: pink url("css/images/backpage_forwardpage.png") no-repeat;  */
+                /*  background 와 같은 대표 속성은 보이지는 않지만 position 속성이 들어가 있다. */
+            
+            background-image: url("css/images/backpage_forwardpage.png");
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 20px;
+            height: 0;
+            padding-top: 20px;
+            overflow: hidden;
+        }
+
+        .btn-next {
+            background-position: -40px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-wrapper">
+        <span class="btn-previous">이전</span>
+        <span class="btn-next">다음</span>
+    </div>
+</body>
+</html>

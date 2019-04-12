@@ -846,12 +846,12 @@ a:visited {
     position: relative;
 }
 
-.event-heading {
+.event-heading, .related-heading  {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.event-heading span {
+.event-heading span, .related-heading span {
     color: #e25d2d;
 }
 
@@ -885,17 +885,43 @@ a:visited {
     background-position: 100% 0;
 }
 
-.related {
-    background: skyblue;
-}
 
 #event-detail {
     margin-top: 10px;
     font-size: 1.3rem;
 }
 
+/* 관련 사이트 */
+.related {
+    border-top: 1px solid #aaa;
+    padding-top: 10px;
+}
 
+.related-list {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: #fff;
+    margin-top:10px;
+    padding:0 5px; 
+    height: 27px;
+    overflow: hidden;
+    transition: all .4s;
+}
 
+.list-act {
+    height: 147px;
+    padding: 10px 0;
+}    
+/* .related-list:hover, .related-list:focus {
+    height: 147px;
+    padding: 10px 0;
+} */
+
+.related-list a { 
+    display: block;
+    line-height: 25px;
+    text-indent: 2em;
+}
 
 
 

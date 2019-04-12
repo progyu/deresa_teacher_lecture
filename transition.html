@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition, Transform 속성</title>
+    <style>
+        .box {
+            border: 5px solid #000;
+            background: yellow;
+            width: 300px;
+            height: 300px;
+            /* transition: background 1s, border-radius 1s 1s ,transform 1s; */
+            transition: all 1s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box:hover, .box:focus {
+            outline: 0;
+            background: pink;
+            border-radius: 50%;
+            transform: rotate(2turn) translateX(150px);
+            /* 재정의 하는 것이다. 이렇게 쓰면 안된다. 속성은 한번만 transform: translate() */
+        }
+    </style>
+</head>
+<body>
+    <div class="box" tabindex="0">박스</div>
+</body>
+</html>

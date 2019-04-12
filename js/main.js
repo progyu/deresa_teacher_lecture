@@ -6,7 +6,7 @@ var tab = $('.tab');
 var section = $('.notice, .pds');
 console.log(section);
 var subItem = $('.sub-item');
-
+var list = $('.related-list');
 
 //디자인 영역을 스크립트로 한번에 처리
 itemSubLink.attr('class','icon-dot-circled');
@@ -38,4 +38,13 @@ tab.on('click keyup', function(e){
         section.removeClass('board-act');
         $(this).parent().addClass('board-act');
     }
+});
+
+// 관련 사이트 목록 제어를 위한 스크립트
+list.on('mouseover focusin',function(){
+    $(this).addClass('list-act');
+});
+
+list.on('mouseout focusout',function(){
+    $(this).removeClass('list-act');
 });

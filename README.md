@@ -4,3 +4,4 @@
 
 ## 수업 내용 정리
 - [0401](https://github.com/progyu/deresa_teacher_lecture/blob/master/README/0401.md)
+- [0402[(https://github.com/progyu/deresa_teacher_lecture/blob/master/README/0402.md)

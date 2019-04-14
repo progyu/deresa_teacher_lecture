@@ -7,3 +7,7 @@
 - [0402](https://github.com/progyu/deresa_teacher_lecture/blob/master/README/0402.md)
 - [0404](https://github.com/progyu/deresa_teacher_lecture/blob/master/README/0404.md)
 - [0405](https://github.com/progyu/deresa_teacher_lecture/blob/master/README/0405.md)
+- [0408](https://github.com/progyu/deresa_teacher_lecture/blob/master/README/0408.md)
+- [0409](https://github.com/progyu/deresa_teacher_lecture/blob/master/README/0409.md)
+- [0411](https://github.com/progyu/deresa_teacher_lecture/blob/master/README/0411.md)
+- [0412](https://github.com/progyu/deresa_teacher_lecture/blob/master/README/0412.md)

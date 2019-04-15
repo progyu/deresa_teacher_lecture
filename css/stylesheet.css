@@ -1021,6 +1021,7 @@ a:visited {
     position: absolute;
     top:0;
     left: 0;
+    z-index: 1000;
 }
 
 .slogan-content {
@@ -1037,9 +1038,111 @@ a:visited {
 
 /* 푸터 */
 .footer-bg {
+    background: #aaa linear-gradient(to bottom, #aaa 0%, #eee 40%, #ddd 70%, #fff 100%);
+}
+.footer {
+    padding: 15px 100px 15px 180px;
+    position: relative;
+}
+
+.footer-logo {
+    position: absolute;
+    top: 35px;
+    left: 40px;
+}
+
+.badge {
+    position: absolute;
+    top:15px;
+    right:0;
+}
+
+.guide {
+    background: #7b8385;
+    color:#fff;
+    padding: 4px 0;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.guide li, .guide a  {
+    display: inline-block;
+}
+
+/* 첫번째 li를 제외하고 2번째 부터 모든 li */
+/* inline-block으로 정렬하면 공백문자가 생김. */
+/* .guide li:nth-child(n+2){
+    background: #e25d2d;
+} */
+
+.guide a {
+    padding: 8px 10px;
+    text-transform: uppercase;
+}
+
+
+.address {
+    margin-top: 10px;
+}
+
+.address span {
+    margin-right: 15px;
+}
+
+.copyright {
+}
+/* .footer-bg {
     background: purple;
+    position: relative;
 }
 .footer {
     background: yellow;
-    height: 10vh;
+    padding-top: 30px;
 }
+
+.footer-logo {
+    background: orange;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.guide, .guide li {
+    display:inline-block;
+}
+
+.guide {
+    background: lime;
+    border-radius: 10px;
+    padding: 0 35px;
+    position: relative;
+    top:-15px;
+}
+
+.guide li {
+    background: powderblue;
+    padding: 10px 10px;
+    margin-left: 10px;
+}
+
+.guide a {
+    background: powderblue;
+    padding: 10px 10px;
+}
+
+.badge {
+    position: absolute;
+    top:12px;
+    right:70px;
+    background: skyblue;
+}
+
+.address {
+    background: darkkhaki;
+    text-align: center;
+}
+
+.copyright {
+    background: palevioletred;
+    display: block;
+    text-align: center;
+} */
